@@ -1,106 +1,110 @@
-# 💼 VIP Match: Full-Stack Salary-Based Dating Platform
+# 💼💘 VIP Match: Career & Salary-Based Dating App
 
-**VIP Match** is a professional-grade, full-stack dating app designed to match users based on income and career compatibility. It includes a secure web application with Firebase Authentication, PDF salary extraction, RESTful Flask backend, and CLI-based salary matching. Built to showcase scalable architecture and real-world integrations.
+**VIP Match** is a dual-interface dating application that helps professionals find love based on salary compatibility and career alignment. It includes:
 
----
+- A 🔧 command-line prototype for rapid matching based on last month's paystubs
+- A 🌐 Flask web app with secure Firebase Authentication for user login and a personal dashboard
 
-## 🧩 Tech Stack Overview
-
-| Layer            | Tools & Libraries                            |
-|------------------|----------------------------------------------|
-| **Frontend**     | HTML, Jinja2 (Flask Templates)               |
-| **Backend**      | Python, Flask, RESTful routes                |
-| **Authentication** | Firebase Auth (Email/Password)             |
-| **PDF Parsing**  | PyMuPDF for extracting salary from paystubs  |
-| **Environment**  | `.env`, `python-dotenv`, `requirements.txt`  |
-| **DevOps**       | Git, Replit-ready, Modular Structure         |
-| **Testing**      | `unittest` (planned for CLI modules)         |
+Whether you're testing offline or deploying online, **VIP Match** offers a modern, privacy-conscious dating solution designed for working professionals.
 
 ---
 
-## 🚀 Features
-
-- 🔐 **Secure Login/Signup** using Firebase (email/password)
-- 📄 **Upload PDF Paystubs** and extract gross/monthly pay
-- 🤖 **Auto-calculated Salary Matching**
-- 🔁 **Reusable Matching Logic** (CLI and Web shared core logic)
-- 🧪 CLI Mode for script-based testing and automation
-- 🌍 Ready for Replit, Render, or GitHub Pages hosting
-
----
-
-## 🧭 Project Structure
+## 📦 Project Structure
 
 ```
-VIP_Match_FullStack/
-├── VIP/                  # CLI Matching App
+vip-match/
+├── VIP/                        # CLI app
 │   ├── main.py
 │   ├── salary_utils.py
 │   ├── matching_engine.py
 │   └── tests/
-├── VIP_web/              # Flask Web App
+├── VIP_web/                   # Web app (Flask + Firebase)
 │   ├── app.py
+│   ├── requirements.txt
 │   ├── templates/
 │   │   ├── index.html
 │   │   └── dashboard.html
-│   ├── static/
-│   ├── uploads/
-│   ├── .env.example
-│   ├── .gitignore
-│   └── requirements.txt
-├── LICENSE
-└── README.md
+│   └── static/
+├── README.md
+└── LICENSE
 ```
 
 ---
 
-## 🛠️ Installation & Setup
+## 🧠 Features
 
-### Prerequisites:
-- Python 3.8+
-- Firebase project (https://console.firebase.google.com)
-- Enable Email/Password sign-in
-- Get your Web API Key
+### CLI Version
+- 🔢 Generate monthly income from weekly paystubs
+- 🤝 Match users by salary range and job compatibility
+- 🧪 Includes unit tests for core components
 
-### Clone & Run Locally:
+### Web Version (Flask + Firebase)
+- 🔐 Email/password authentication via Firebase
+- 📲 Session-based dashboard
+- 📤 Easy deploy to Replit or Render
+- 🔧 Ready for Google OAuth and salary input form (coming soon)
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/vip-match.git
-cd VIP_Match_FullStack/VIP_web
-cp .env.example .env
-# Paste your Firebase API key inside .env
+git clone https://github.com/yourusername/vip-match.git
+cd vip-match
+```
+
+### 2. Setup the CLI App
+
+```bash
+cd VIP
+python main.py
+```
+
+### 3. Run the Web App
+
+1. Create a Firebase project
+2. Enable **Email/Password** sign-in
+3. Copy your Web API Key and paste it into `app.py`:
+```python
+API_KEY = "AIzaSyADx0ZoMzUqZXshz4cq0fWR5f94nxLdgHg"
+```
+
+4. Install dependencies and run:
+
+```bash
+cd VIP_web
 pip install -r requirements.txt
 python app.py
 ```
 
----
-
-## 🔒 .env File Example
-
-```env
-# .env
-FIREBASE_API_KEY=your_firebase_web_api_key_here
-```
+Visit `http://127.0.0.1:5000/` to test it live.
 
 ---
 
-## 📄 Description for Employers
+## 🔐 Security & Privacy
 
-> VIP Match demonstrates full-stack development skills using Python and Firebase.
-> It integrates secure authentication, RESTful design, real-time PDF processing, session management, and templating.
-> Modular design allows for testing, scalability, and frontend/backend decoupling.
+All authentication is handled securely via Firebase. No passwords or emails are stored locally. For enhanced security, consider implementing OAuth login via Google or LinkedIn.
 
 ---
 
-## 🧪 Coming Soon
+## 🧩 Future Enhancements
 
-- Google OAuth & LinkedIn OAuth integration
-- Firestore database for persistent profiles
-- Full unit test coverage
-- Swipe-based UI for compatibility scores
+- Upload paystub PDF for automatic salary parsing
+- Match dashboard with swipe UI
+- User profiles with avatar and bio
+- Email/OTP verification
+- Google and LinkedIn OAuth support
 
 ---
 
 ## 📄 License
 
-MIT License – 2025 VIP Match
+This project is licensed under the MIT License – see `LICENSE` for details.
+
+---
+
+## 🧑‍💻 Authors
+
+Built with ❤️ by [YourName] – Powered by Python, Flask, and Firebase
